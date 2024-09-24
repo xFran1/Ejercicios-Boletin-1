@@ -7,9 +7,9 @@ import java.lang.NumberFormatException;
 
 public class ej1 {
     public static void main(String[] args) {
-        // cambiaStrings("aeiou r", "eo z w");
+        cambiaStrings("aeiou r", "eo z w");
 
-        entreDosFechas();
+        // entreDosFechas();
 
     }
 
