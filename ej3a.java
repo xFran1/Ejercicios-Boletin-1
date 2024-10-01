@@ -33,10 +33,10 @@ class Cuenta {
     public void retirar(double dinero_retirar) {
         if (cantidad - dinero_retirar > 0) {
             this.cantidad = cantidad - dinero_retirar;
-            this.toString();
+            System.out.println("Se ha retirado " + dinero_retirar);
         } else {
             this.cantidad = 0.0;
-            this.toString();
+            System.out.println("Se ha retirado " + dinero_retirar + " y la cuenta se ha quedado a cero");
         }
     }
 
