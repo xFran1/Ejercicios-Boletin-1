@@ -6,39 +6,53 @@ public class ej3g {
         Scanner s = new Scanner(System.in);
         ArrayList<Persona> array = new ArrayList<>();
 
-            System.out.println("Nombre:");
-            String nombre = s.next();
+        System.out.println("Nombre:");
+        String nombre = s.next();
 
-            System.out.println("Edad");
-            int edad = s.nextInt();
+        System.out.println("Edad");
+        int edad = s.nextInt();
 
-            System.out.println("Sexo 1.Hombre 2.Mujer");
-            int respuesta = s.nextInt();
+        System.out.println("Sexo 1.Hombre 2.Mujer");
+        int respuesta = s.nextInt();
 
-            String genero = "Hombre";
-            if (respuesta == 2) {
-                genero = "Mujer";
-            }
+        String genero = "Hombre";
+        if (respuesta == 2) {
+            genero = "Mujer";
+        }
 
-            System.out.println("Peso:");
-            double peso = s.nextDouble();
+        System.out.println("Peso:");
+        double peso = s.nextDouble();
 
-            System.out.println("Altura en cm");
-            int altura = s.nextInt();
-            Persona p1 = ();
-            Persona p2 = ();
-            if(genero.equals("Mujer")){
-                Persona p1 = new Persona(nombre, edad, sexo.Mujer, peso, altura);
-                Persona p2 = new Persona(nombre, edad, sexo.Mujer);
+        System.out.println("Altura en cm");
+        int altura = s.nextInt();
+        Persona p1 = new Persona();
+        Persona p2 = new Persona();
 
-            }else{
-                Persona p1 = new Persona(nombre, edad, sexo.Hombre, peso, altura);
-                Persona p2 = new Persona(nombre, edad, sexo.Hombre);
-                
+        if (genero.equals("Mujer")) {
+            p1 = new Persona(nombre, edad, sexo.Mujer, peso, altura);
+            p2 = new Persona(nombre, edad, sexo.Mujer);
 
-            }
-            
+        } else {
+            p1 = new Persona(nombre, edad, sexo.Hombre, peso, altura);
+            p2 = new Persona(nombre, edad, sexo.Hombre);
 
+        }
+
+        p2.setPeso(85);
+        p2.setAltura(177);
+
+        Persona p3 = new Persona();
+        p3.setNombre("Felipe");
+        p3.setEdad(25);
+        p3.setAltura(183);
+        p3.setPeso(83);
+        p3.setSexo_elegir(sexo.Hombre);
+
+        System.out.println(p1.esMayorDeEdad());
+        System.out.println(p2.esMayorDeEdad());
+        System.out.println(p3.esMayorDeEdad());
+
+        System.out.println(p1.calcularIMC());
 
     }
 
