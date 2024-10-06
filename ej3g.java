@@ -52,7 +52,13 @@ public class ej3g {
         System.out.println(p2.esMayorDeEdad());
         System.out.println(p3.esMayorDeEdad());
 
-        System.out.println(p1.calcularIMC());
+        p1.pesoIdeal();
+        p2.pesoIdeal();
+        p3.pesoIdeal();
+
+        System.out.println(p1.toString());
+        System.out.println(p2.toString());
+        System.out.println(p3.toString());
 
     }
 
@@ -88,6 +94,18 @@ class Persona {
         this.sexo_elegir = sexo_elegir;
         this.peso = peso;
         this.altura = altura;
+    }
+
+    public void pesoIdeal() {
+
+        double pesoIdeal = this.calcularIMC();
+        if (pesoIdeal == 0) {
+            System.out.println("Esta en su peso ideal");
+        } else if (pesoIdeal == -1) {
+            System.out.println("Esta por debajo de su peso ideal");
+        } else {
+            System.out.println("Tiene sobrepeso");
+        }
     }
 
     public double calcularIMC() {
